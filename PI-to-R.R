@@ -28,6 +28,7 @@ fix.timestamps <- function(pi.data) {
   times <- as.POSIXct(ch.times)
   return(xts::xts(pi.data[,1], order.by = times))
 }
+var1 <- fix.timestamps(var1)
 
 # Pro - this example creates variables from names and tags stored in a matrix
 pi.tags <- matrix(c("DIS PAA N Upstream Residual", "pi:\\\\applepi\\AI_K826"), ncol = 2)
